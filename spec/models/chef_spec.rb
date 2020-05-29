@@ -8,7 +8,7 @@ RSpec.describe Chef, type: :model do
     it {should have_many :dishes}
   end
 
-  describe "class methods" do
+  describe "instance methods" do
     it "#all_ingredients" do
       louie = Chef.create!(name: "Louis")
       dinner = Dish.create!(name: "hot dogs", description: "delicious perfect food", chef_id: louie.id)

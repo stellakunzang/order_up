@@ -11,7 +11,7 @@ RSpec.describe Dish, type: :model do
     it {should have_many(:ingredients).through(:dish_ingredients)}
   end
 
-  describe "class methods" do
+  describe "instance methods" do
     it "#total_calories" do
       louie = Chef.create!(name: "Louis")
       dinner = Dish.create!(name: "hot dogs", description: "delicious perfect food", chef_id: louie.id)
